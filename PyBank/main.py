@@ -42,13 +42,11 @@ average_change_rounded=round(average_change,2)
 max_profit_loss_rounded=int(max_profit_loss)
 max_profit_gain_rounded=int(max_profit_gain)
 
-print(total_net_rounded)
-print(total_months)
-print(average_change_rounded)
-print(max_profit_loss_rounded)
-print(max_profit_gain_rounded)
-print(max_profit_month)
-print(max_loss_month)
+print("Total Months: " + str(total_months))
+print("Total: $" + str(total_net_rounded))
+print("Average Change: $"+ str(average_change_rounded))
+print("Greatest Increase in Profits: "+max_profit_month+ " ($" + str(max_profit_gain_rounded)+")")
+print("Greatest Decrease in Profits: "+max_loss_month+ " ($" + str(max_profit_loss_rounded)+")")
 
 output  = "\n".join((
     f"Financial Analysis",
@@ -57,7 +55,7 @@ output  = "\n".join((
     f"Total: ${total_net_rounded}\n"
     f"Average Change: ${average_change_rounded}\n"
     f"Greatest Increase in Profits: {max_profit_month} (${max_profit_gain_rounded})\n"
-    f"Greatest Decrease in Profits: {max_profit_month} (${max_profit_loss_rounded})\n"
+    f"Greatest Decrease in Profits: {max_loss_month} (${max_profit_loss_rounded})\n"
     ))
 
 with open(file_to_output, "w") as txt_file:
